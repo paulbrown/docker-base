@@ -1,3 +1,4 @@
 FROM centos:latest
 
-RUN yum update -y && yum clean all
+RUN yum upgrade --quiet --assumeyes \
+	&& yum clean all
